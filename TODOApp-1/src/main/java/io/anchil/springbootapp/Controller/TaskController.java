@@ -35,6 +35,7 @@ public class TaskController {
 		ModelAndView model = new ModelAndView();
 		String name = getLoggedInUserName();
 		model.addObject("tasks", taskService.getTasksByUser(name));
+		model.addObject("name",name);
 		model.setViewName("listTasks");
 		return model;
 	}
@@ -57,6 +58,7 @@ public class TaskController {
 		 taskService.deleteTask(id); //
 		 String name = getLoggedInUserName();
 			model.addObject("tasks", taskService.getTasksByUser(name));
+			model.addObject("name",name);
 			model.setViewName("listTasks");
 			return model;
 	 }
@@ -95,6 +97,7 @@ public class TaskController {
 		task.setUserName(name);
 		taskService.saveTask(task);
 		model.addObject("tasks", taskService.getTasksByUser(name));
+		model.addObject("name",name);
 		model.setViewName("listTasks");
 		return model;
 		// return "listTasks";

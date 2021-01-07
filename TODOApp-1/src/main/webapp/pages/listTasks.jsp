@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	<h1>Hello ${requestScope.name} </h1>
 	<br/>
 	<div class="panel panel-primary">
 		<div class="panel-heading">
